@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C36252D-15E0-4614-8209-FDEE027B4F39}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Game</RootNamespace>
+    <AssemblyName>Game</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WMPLib.1.0.0\lib\AxInterop.WMPLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WMPLib.1.0.0\lib\Interop.WMPLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HeroChoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeroChoose.Designer.cs">
+      <DependentUpon>HeroChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Intro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intro.Designer.cs">
+      <DependentUpon>Intro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\Level1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\Level1.Designer.cs">
+      <DependentUpon>Level1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\Level2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\Level2.Designer.cs">
+      <DependentUpon>Level2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\Level3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\Level3.Designer.cs">
+      <DependentUpon>Level3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\Level4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\Level4.Designer.cs">
+      <DependentUpon>Level4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outro.Designer.cs">
+      <DependentUpon>Outro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menus.Designer.cs">
+      <DependentUpon>Menus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\RoundButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripts\Player.cs" />
+    <EmbeddedResource Include="HeroChoose.resx">
+      <DependentUpon>HeroChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intro.resx">
+      <DependentUpon>Intro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\Level1.resx">
+      <DependentUpon>Level1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\Level2.resx">
+      <DependentUpon>Level2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\Level3.resx">
+      <DependentUpon>Level3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\Level4.resx">
+      <DependentUpon>Level4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outro.resx">
+      <DependentUpon>Outro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menus.resx">
+      <DependentUpon>Menus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\шрифт.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Sprites\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Новый точечный рисунок.bmp" />
+    <None Include="Box\1.png" />
+    <None Include="Box\2.png" />
+    <None Include="Box\3.png" />
+    <None Include="Box\4.png" />
+    <None Include="Box\5.png" />
+    <None Include="Box\6.png" />
+    <None Include="Box\7.png" />
+    <None Include="Box\8.png" />
+    <None Include="image.png" />
+    <Content Include="Resources\1.png" />
+    <None Include="Resources\выбор героя и управление1.png" />
+    <None Include="Resources\выбор героя и управление.png" />
+    <None Include="Resources\лестница1.png" />
+    <None Include="Resources\ваза 4.png" />
+    <None Include="Resources\ваза 3.png" />
+    <None Include="Resources\ваза 2.png" />
+    <None Include="Resources\ваза 1.png" />
+    <None Include="Resources\главный герой.png" />
+    <None Include="Resources\задний фон4.jpg" />
+    <None Include="Resources\задний фон3.jpg" />
+    <None Include="Resources\платформа льда 1.png" />
+    <None Include="Resources\платформа 21.png" />
+    <None Include="Resources\платформа.png" />
+    <None Include="Resources\На этом уровне робот перемещается медленнее.png" />
+    <None Include="Resources\На этом уровне робот может прыгать выше..png" />
+    <None Include="Resources\На этом уровне робот может скользить по льду.Тем самым перемещаться быстрее.png" />
+    <None Include="Resources\задний фон2.jpg" />
+    <None Include="Resources\лестница.png" />
+    <None Include="Resources\ключка.png" />
+    <None Include="Resources\колючка.png" />
+    <None Include="Resources\платформа 81.png" />
+    <None Include="Resources\платформа 2.png" />
+    <None Include="Resources\задний фон1.jpg" />
+    <None Include="Resources\портал1.png" />
+    <None Include="Resources\платформа 12.png" />
+    <None Include="Resources\платформа 10.png" />
+    <None Include="Resources\платформа 8.png" />
+    <None Include="Resources\платформа 5.png" />
+    <None Include="Resources\платформа 11.png" />
+    <None Include="Resources\задний фог.jpg" />
+    <None Include="Resources\портал.png" />
+    <None Include="Resources\лестница 1.png" />
+    <None Include="Resources\гриб.png" />
+    <None Include="Resources\сердце.png" />
+    <None Include="Resources\robot1.png" />
+    <None Include="Resources\вода.png" />
+    <None Include="Resources\платформа 1.png" />
+    <None Include="Resources\задний фон.jpg" />
+    <None Include="Resources\Много жизней Временный щит.png" />
+    <None Include="Resources\Медленнее перемещается.png" />
+    <None Include="Resources\щит воина.png" />
+    <None Include="Resources\Огненные стрелы наносят больший урон.png" />
+    <None Include="Resources\Магия света %28оглушает врагов на 2 секунды%29.png" />
+    <None Include="Resources\Способность к лечению.png" />
+    <None Include="Resources\Стрелы в ограниченном кол-ве Ихможно собрать.png" />
+    <None Include="Resources\Меньше жизней.png" />
+    <None Include="Resources\урон камнем.png" />
+    <None Include="Resources\огненная стрела.png" />
+    <None Include="Resources\стрела обычная.png" />
+    <None Include="Resources\магия света.png" />
+    <None Include="Resources\урон магией.png" />
+    <None Include="Resources\robot.png" />
+    <None Include="Resources\Огненными 20 - 25.png" />
+    <None Include="Resources\Урон 10 - 15.png" />
+    <None Include="Resources\Урон 15 - 20.png" />
+    <None Include="Resources\Урон 20 - 30.png" />
+    <None Include="Resources\Здоровье 200.png" />
+    <None Include="Resources\Здоровье 150.png" />
+    <None Include="Resources\Здоровье 100.png" />
+    <None Include="Resources\воин.png" />
+    <None Include="Resources\лучник.png" />
+    <None Include="Resources\исцеление для мага.png" />
+    <None Include="Resources\маг.png" />
+    <None Include="Resources\доп способность.png" />
+    <None Include="Resources\атака.png" />
+    <None Include="Resources\управленик ЛКМ.png" />
+    <None Include="Resources\прыжок.png" />
+    <None Include="Resources\space.png" />
+    <None Include="Resources\кнопка для space.png" />
+    <None Include="Resources\использовать.png" />
+    <None Include="Resources\S.png" />
+    <None Include="Resources\W.png" />
+    <None Include="Resources\кнопка1.png" />
+    <None Include="Resources\кнопка.png" />
+    <None Include="Resources\Управление.png" />
+    <None Include="Resources\окно управления.png" />
+    <None Include="Resources\Выберите способность.png" />
+    <None Include="Resources\окно воина.png" />
+    <None Include="Resources\окно лучника.png" />
+    <None Include="Resources\окно мага.png" />
+    <None Include="Resources\окно способностей.png" />
+    <None Include="Resources\задний фон.png" />
+    <None Include="Resources\прозрачный прямоугольник.png" />
+    <None Include="Resources\картина сверху1.jpg" />
+    <None Include="Resources\картина сверху.jpg" />
+    <None Include="Resources\31.png" />
+    <None Include="Resources\21.png" />
+    <None Include="Resources\11.png" />
+    <None Include="Resources\12.png" />
+    <None Include="Resources\13.png" />
+    <None Include="Resources\14.png" />
+    <Content Include="Resources\2.png" />
+    <None Include="Resources\22.png" />
+    <None Include="Resources\23.png" />
+    <Content Include="Resources\3.png" />
+    <None Include="Resources\A.png" />
+    <None Include="Resources\D.png" />
+    <None Include="Resources\E.png" />
+    <None Include="Resources\32.png" />
+    <None Include="Resources\5.png" />
+    <None Include="Resources\51.png" />
+    <None Include="Resources\4.png" />
+    <Content Include="Resources\e154681c4a75334.mp3" />
+    <Content Include="Resources\Ray_Gun_Hero_-_I_Am_Android_68851446.mp3" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
